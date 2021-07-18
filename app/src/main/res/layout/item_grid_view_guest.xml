@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@drawable/stroke_item_grid"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/tv_namaGuest"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        tools:text="Dhandy"/>
+
+</RelativeLayout>
