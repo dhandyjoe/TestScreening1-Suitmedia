@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_events"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:theme="@style/ToolbarColoredBackArrow"
+        android:theme="@style/MyActionBar"
         app:titleTextColor="@color/map_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
