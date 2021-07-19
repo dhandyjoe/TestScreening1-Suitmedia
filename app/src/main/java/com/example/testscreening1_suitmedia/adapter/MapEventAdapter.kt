@@ -9,11 +9,11 @@ import com.example.testscreening1_suitmedia.databinding.ItemMapEventBinding
 import com.example.testscreening1_suitmedia.databinding.ItemRecycleViewEventsBinding
 import com.example.testscreening1_suitmedia.model.Events
 
-class CardEventsAdapter (val listEvents: ArrayList<Events>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private class MyViewHolder(val binding: ItemRecycleViewEventsBinding): RecyclerView.ViewHolder(binding.root)
+class MapEventAdapter (val listEvents: ArrayList<Events>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private class MyViewHolder(val binding: ItemMapEventBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return MyViewHolder(ItemRecycleViewEventsBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return MyViewHolder(ItemMapEventBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -23,11 +23,9 @@ class CardEventsAdapter (val listEvents: ArrayList<Events>): RecyclerView.Adapte
             Glide.with(holder.itemView.context)
                 .load(model.image)
                 .apply(RequestOptions().override(80, 80))
-                .into(holder.binding.imgPoster)
+                .into(holder.binding.ivMapEvent)
 
-            holder.binding.tvNamaEvent.text = model.name
-            holder.binding.tvTanggalEvent.text = model.tanggal
-            holder.binding.tvDescriptionEvent.text = model.description
+            holder.binding.tvMapEvent.text = model.name
             holder.itemView.setOnClickListener {
                 onClickListener!!.onClick(position, model)
             }

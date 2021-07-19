@@ -4,12 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="16dp">
+    android:paddingBottom="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:elevation="2dp"
+        android:layout_height="200dp"
         app:cardCornerRadius="10dp">
 
         <RelativeLayout
@@ -19,9 +18,9 @@
 
             <ImageView
                 android:id="@+id/img_poster"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/dota" />
 
@@ -30,25 +29,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
                 tools:text="Dota Tournament"
-                android:layout_toRightOf="@id/img_poster"/>
+                />
 
             <TextView
                 android:id="@+id/tv_tanggalEvent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
                 tools:text="30 June 2020"
-                android:textStyle="italic"
-                android:layout_toRightOf="@id/img_poster"
+                android:textColor="#AB981D"
                 android:layout_below="@id/tv_namaEvent"/>
 
+            <TextView
+                android:id="@+id/tv_descriptionEvent"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tanggalEvent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                tools:text="@string/lorem"/>
         </RelativeLayout>
-
-
-
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>

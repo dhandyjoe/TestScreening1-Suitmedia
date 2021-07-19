@@ -30,6 +30,14 @@ object DataEvents {
         "25 Des 2020",
     )
 
+    private val description = arrayOf(
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa."
+    )
+
     val listEvents: ArrayList<Events>
         get() {
             val list = arrayListOf<Events>()
@@ -38,6 +46,7 @@ object DataEvents {
                 event.image = image[position]
                 event.name = name[position]
                 event.tanggal = tanggal[position]
+                event.description = description[position].toString()
                 list.add(event)
             }
             return list

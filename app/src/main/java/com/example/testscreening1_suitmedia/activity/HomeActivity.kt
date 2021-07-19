@@ -1,5 +1,8 @@
 package com.example.testscreening1_suitmedia.activity
 
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -25,11 +28,35 @@ class HomeActivity : AppCompatActivity() {
             if(binding.etName.text.toString().isEmpty()){
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
             } else {
+                dialogPalindrome(isPalindrome(binding.etName.text.toString()))
+            }
+        }
+    }
+
+    private fun dialogPalindrome (boolean: Boolean) {
+        AlertDialog.Builder(this)
+            .setMessage(if (boolean) "isPalindrome" else "not palindrome")
+            .setPositiveButton("Next", DialogInterface.OnClickListener { dialogInterface, i ->
                 val intent = Intent(this, MainActivity::class.java)
                 userPreferences.setNameCustomer(binding.etName.text.toString())
                 startActivity(intent)
                 finish()
+            })
+            .setNegativeButton("Cancel", DialogInterface.OnClickListener { dialogInterface, i ->
+            })
+            .show()
+    }
+
+    private fun isPalindrome(name: String): Boolean {
+        val names = name.replace(" ", "")
+        for (value in 0 until (names.length)) {
+            val indeksAwal = value
+            val indeksAkhir = names.length - value - 1
+
+            if (names[indeksAwal] != names[indeksAkhir]) {
+                return false
             }
         }
+        return true
     }
 }

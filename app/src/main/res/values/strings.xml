@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TestScreening1 - Suitmedia</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

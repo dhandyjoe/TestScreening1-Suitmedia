@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var userPreferences: UserPreferences
+    private lateinit var userPreferences: UserPreferences // untuk menyimpan data sementara
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,13 +40,11 @@ class MainActivity : AppCompatActivity() {
         binding.btnEvents.setOnClickListener {
             val intent = Intent(this, EventActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnGuest.setOnClickListener {
             val intent = Intent(this, GuestActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

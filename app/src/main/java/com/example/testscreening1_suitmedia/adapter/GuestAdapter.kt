@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testscreening1_suitmedia.databinding.ItemGridViewGuestBinding
+import com.example.testscreening1_suitmedia.model.Events
 import com.example.testscreening1_suitmedia.model.GuestResponse
 
 
@@ -28,6 +29,18 @@ class GuestAdapter (val listGuest: ArrayList<GuestResponse>): RecyclerView.Adapt
 
     override fun getItemCount(): Int {
         return listGuest.size
+    }
+
+    // Clean all elements of the recycler
+    fun clear() {
+        listGuest.clear()
+        notifyDataSetChanged()
+    }
+
+    // Clean all elements of the recycler
+    fun addAll(list: ArrayList<GuestResponse>) {
+        listGuest.addAll(list)
+        notifyDataSetChanged()
     }
 
     // code for click listener
