@@ -38,6 +38,22 @@ object DataEvents {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed massa consectetur, blandit arcu vitae, finibus massa."
     )
 
+    private val latitude = arrayOf(
+        -6.2,
+        54.5,
+        -6.9,
+        -6.9,
+        48.1
+    )
+
+    private val longitude = arrayOf(
+        106.8,
+        15.2,
+        107.6,
+        110.4,
+        100.1
+    )
+
     val listEvents: ArrayList<Events>
         get() {
             val list = arrayListOf<Events>()
@@ -47,6 +63,8 @@ object DataEvents {
                 event.name = name[position]
                 event.tanggal = tanggal[position]
                 event.description = description[position].toString()
+                event.latitude = latitude[position]
+                event.longitude = longitude[position]
                 list.add(event)
             }
             return list

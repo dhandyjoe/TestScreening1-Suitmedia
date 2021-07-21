@@ -5,6 +5,6 @@ data class Events (
     var name: String? = "",
     var tanggal: String? = "",
     var description: String? = "",
-    var latitude: String? = "",
-    var longitude: String = ""
+    var latitude: Double? = 0.0,
+    var longitude: Double = 0.0
 )
