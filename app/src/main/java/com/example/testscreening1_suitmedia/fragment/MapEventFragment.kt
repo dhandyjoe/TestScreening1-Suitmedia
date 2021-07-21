@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebSettings
 import android.webkit.WebView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,7 @@ import com.example.testscreening1_suitmedia.adapter.MapEventAdapter
 import com.example.testscreening1_suitmedia.databinding.FragmentMapEventBinding
 import com.example.testscreening1_suitmedia.model.Events
 import com.example.testscreening1_suitmedia.utils.DataEvents
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 
 // TODO: Rename parameter arguments, choose names that match
@@ -73,6 +75,12 @@ class MapEventFragment : Fragment() {
         // Intent Data
         data.setOnClickListener(object : MapEventAdapter.OnClickListener{
             override fun onClick(position: Int, model: Events) {
+                val bundle = Bundle()
+                bundle.putString("markertitle", listEvents!![position].name)
+                val mapsFragment = MapsFragment()
+                mapsFragment.arguments = bundle
+
+                Toast.makeText(context, listEvents!![position].name, Toast.LENGTH_SHORT).show()
             }
         })
     }
