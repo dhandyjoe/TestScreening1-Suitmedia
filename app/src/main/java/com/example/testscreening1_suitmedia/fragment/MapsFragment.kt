@@ -27,9 +27,27 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
+        val dota = LatLng(-6.2, 106.8)
+        googleMap.addMarker(MarkerOptions().position(dota).title("Dota Tournament 2020"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(dota))
+
+        val euro2020 = LatLng(54.5, 15.2)
+        googleMap.addMarker(MarkerOptions().position(euro2020).title("Euro 2020"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(euro2020))
+
+        val festivalKuliner = LatLng(-6.9, 107.6)
+        googleMap.addMarker(MarkerOptions().position(festivalKuliner).title("Festival Kuliner Serpong"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(festivalKuliner))
+
+        val liveMusic = LatLng(	-6.9,110.4)
+        googleMap.addMarker(MarkerOptions().position(liveMusic).title("Cafe Live Music"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(liveMusic))
+
+        val MotoGP = LatLng(48.1, 100.1)
+        googleMap.addMarker(MarkerOptions().position(liveMusic).title("MotoGP World Championship"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(liveMusic))
+
     }
 
     override fun onCreateView(
